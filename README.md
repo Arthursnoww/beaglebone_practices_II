@@ -4,24 +4,24 @@ esse material foi desenvolvido durante a disciplina TECNICAS DE PROGRAMAÇÃO CO
 
 ## requisitos 
 
-- [u-boot](#sobre)
-- [embedded linux](#como-começar)
-- [toolchain](#pré-requisitos)
-- [busibox](#instalação)
-- [buildroot](#uso)
-- [Contribuição](#contribuição)
-- [Autores](#autores)
-- [Licença](#licença)
-- [Agradecimentos](#agradecimentos)
+- u-boot
+- embedded linux
+- toolchain
+- busibox
+- buildroot
 
-## Sobre
+## Ementa
 
-Escreva uma descrição detalhada do seu projeto. O que ele faz? Quais problemas resolve? Por que esse projeto é útil? Quais são as suas funcionalidades principais?
+Desenvolvimento avançado para sistemas embarcados, utilizando técnica
+modular e otmização para programação de embarcados. Conhecendo al-
+guns dos principais RTOS (MQX, freeRTOS e mbedRTOS) para sistemas
+embarcados utilizando micricontroladores, e vantagens e desvantagens do
+seu uso. Desenvolvimento de drivers utilizando a plataforma mbed. Apren-
+dendo a desenvolver Linux e drivers para plataformas com processadores,
+utilizando a plataforma Yocto. Desenvolvimento de um pequeno sistema
+embarcado baseado no paradigma de programação Orientada a Objetos.
 
-## Como começar
+## Material de apoio 
 
-Estas instruções fornecerão uma cópia do projeto em execução na sua máquina local para fins de desenvolvimento e teste.
+Na pasta /pratica voce pode encontrar os pdfs contendo todo material de apoio
 
-### Pré-requisitos
-
-O que você precisa para instalar o software e como instalá-lo.
