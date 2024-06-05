@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Temperatura Atual</h2>
+<button onclick="getTemperatura()">Obter Temperatura</button>
+<p id="temperatura"></p>
+
+<script>
+function getTemperatura() {
+  fetch('/temperatura')
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById('temperatura').innerHTML = data + '°C';
+  });
+}
+</script>
+
+</body>
+</html>
+

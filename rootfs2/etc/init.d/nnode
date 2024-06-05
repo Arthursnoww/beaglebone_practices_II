@@ -1,0 +1,60 @@
+#!/bin/bash
+### BEGIN INIT INFO
+# Provides:          meu_projeto
+# Required-Start:    $local_fs $network $remote_fs
+# Required-Stop:     $local_fs $network $remote_fs
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: Inicializa o servidor Node.js para o projeto.
+# Description:       Inicializa o servidor Node.js para o projeto.
+### END INIT INFO
+
+# Variáveis de configuração
+PROJETO_DIR=/projeto
+NODE_BIN=/bin/node
+SERVER_JS=$PROJETO_DIR/server.js
+LOG_FILE=/var/log/meu_projeto.log
+PID_FILE=/var/run/meu_projeto.pid
+
+# Função para iniciar o servidor
+start() {
+    echo "Iniciando server..."
+    cd $PROJETO_DIR
+    $NODE_BIN $SERVER_JS >> $LOG_FILE 2>&1 &
+    echo $! > $PID_FILE
+    echo "server iniciado"
+}
+
+# Função para parar o servidor
+stop() {
+    echo "encerrando server..."
+    if [ -f $PID_FILE ]; then
+        PID=$(cat $PID_FILE)
+        kill $PID
+        rm $PID_FILE
+        echo "server encerrado"
+    else
+        echo "server nao encontrado"
+    fi
+}
+
+# Verifica o argumento passado para o script
+case "$1" in
+    start)
+        start
+        ;;
+    stop)
+        stop
+        ;;
+    restart)
+        stop
+        sleep 1
+        start
+        ;;
+    *)
+        echo "Uso: $0 {start|stop|restart}"
+        exit 1
+        ;;
+esac
+
+exit 0

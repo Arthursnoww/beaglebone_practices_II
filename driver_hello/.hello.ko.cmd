@@ -1,0 +1,1 @@
+cmd_/home/arthur/TPSE/tpse_2/driver_hello/hello.ko := /bin/arm-linux-gnueabihf-ld -r -EL -z noexecstack --build-id=sha1  -T scripts/module.lds -o /home/arthur/TPSE/tpse_2/driver_hello/hello.ko /home/arthur/TPSE/tpse_2/driver_hello/hello.o /home/arthur/TPSE/tpse_2/driver_hello/hello.mod.o;  true

@@ -1,0 +1,14 @@
+setenv argsnfs root=/dev/nfs rw nfsroot=${10.0.0.1}/home/arthur/TPSE/tpse_2/rootfs rootwait
+
+setenv consolecfg console=ttyS0,115200,n8
+
+setenv ipconfig 10.0.0.2
+
+setenv bootargs ${consolecfg} ${ipcfg} ${argsnfs}
+
+root=/dev/nfs rw nfsroot=${10.0.0.1}:/home/arthur/TPSE/tpse_2/rootfs,,nfsvers=3,tcp rootwait;console=ttyS0,115200,n8;ipconfig 10.0.0.2
+   
+   
+load mmc 0:1 0x80F80000 am335x-boneblack.dtb ; load mmc 0:1 0x80007FC0 uImage ; bootm 0x80007FC0 - 0x80F80000
+
+http://10.0.0.2/tpse/index.html

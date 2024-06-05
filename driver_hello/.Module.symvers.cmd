@@ -1,0 +1,1 @@
+cmd_/home/arthur/TPSE/tpse_2/driver_hello/Module.symvers := sed 's/ko$$/o/' /home/arthur/TPSE/tpse_2/driver_hello/modules.order | scripts/mod/modpost -m    -o /home/arthur/TPSE/tpse_2/driver_hello/Module.symvers -e -i Module.symvers   -T -
